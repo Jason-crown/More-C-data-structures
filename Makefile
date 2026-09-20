@@ -9,7 +9,7 @@ OBJ = $(SRC:.c=.o)
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
-src/%.o: src/%.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
